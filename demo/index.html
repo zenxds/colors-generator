@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .demo {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+
+  </div>
+  <script src="/colors-generator.js"></script>
+  <script>
+    var c = colors.generate('#86bff2', 100)
+    document.getElementById('app').innerHTML = c.map(function(item) {
+      return '<div class="demo" style="background: ' + item + '"></div>'
+    }).join('')
+  </script>
+</body>
+</html>

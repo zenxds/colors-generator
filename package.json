@@ -1,0 +1,21 @@
+{
+  "name": "colors-generator",
+  "version": "0.1.0",
+  "description": "",
+  "main": "build/colors-generator.js",
+  "scripts": {
+    "start": "webpack-dev-server -w",
+    "build": "webpack"
+  },
+  "author": "dongshuang.xds",
+  "license": "ISC",
+  "publishConfig": {
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
