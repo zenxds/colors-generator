@@ -86,5 +86,6 @@ function parseHex(str) {
 }
 
 function toHex(num) {
-  return num.toString(16)
+  const ret = num.toString(16)
+  return ret.length === 1 ? ('0' + ret) : ret
 }
