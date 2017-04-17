@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 /**
  * https://zh.wikipedia.org/wiki/HSL%E5%92%8CHSV%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4#.E4.BB.8ERGB.E5.88.B0HSL.E6.88.96HSV.E7.9A.84.E8.BD.AC.E6.8D.A2
  * http://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion
@@ -65,13 +65,13 @@ export function RGBToHSL(color) {
     switch (max) {
       case r:
         h = (g - b) / diff + (g < b ? 6 : 0)
-        break;
+        break
       case g:
         h = (b - r) / diff + 2
-        break;
+        break
       case b:
         h = (r - g) / diff + 4
-        break;
+        break
     }
 
     // h需要乘以360度才是通常意义上的数字
