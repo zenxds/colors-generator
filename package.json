@@ -1,6 +1,6 @@
 {
   "name": "colors-generator",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "",
   "main": "build/colors-generator.js",
   "scripts": {

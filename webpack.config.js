@@ -7,7 +7,7 @@ const config = {
     output: {
       path: path.join(__dirname, './build'),
       filename: 'colors-generator.js',
-      library: "colors",
+      library: "colorsGenerator",
       libraryTarget: "umd"
     },
     module: {
