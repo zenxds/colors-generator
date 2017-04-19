@@ -1,15 +1,19 @@
 {
   "name": "colors-generator",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "",
   "main": "build/colors-generator.js",
   "scripts": {
-    "start": "webpack-dev-server -w",
-    "build": "webpack"
+    "start": "webpack-dev-server -w --open --env=dev",
+    "build": "webpack --env=prod"
   },
   "author": "dongshuang.xds",
   "license": "ISC",
   "publishConfig": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zenxds/colors-generator.git"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

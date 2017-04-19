@@ -1,30 +1,44 @@
 const path = require('path')
 const webpack = require('webpack')
 
-module.exports = {
-  entry: './index.js',
-  output: {
-    path: path.join(__dirname, './build'),
-    filename: 'colors-generator.js',
-    library: "colors",
-    libraryTarget: "umd"
+const config = {
+  base: {
+    entry: './index.js',
+    output: {
+      path: path.join(__dirname, './build'),
+      filename: 'colors-generator.js',
+      library: "colors",
+      libraryTarget: "umd"
+    },
+    module: {
+      rules: [{
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }]
+    },
+    plugins: []
   },
-  module: {
-    rules: [{
-      test: /\.jsx?$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/
-    }]
+  dev: {
+    plugins: [
+      new webpack.HotModuleReplacementPlugin()
+    ]
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        ascii_only: true
-      },
-      compress: {
-        warnings: false,
-        drop_console: false
-      }
-    })
-  ]
+  prod: {
+    plugins: [
+      new webpack.optimize.UglifyJsPlugin({
+        output: {
+          ascii_only: true
+        },
+        compress: {
+          warnings: false,
+          drop_console: false
+        }
+      })
+    ]
+  }
+}
+
+module.exports = function(env) {
+  return Object.assign(config.base, config[env])
 }
