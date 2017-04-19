@@ -1,5 +1,4 @@
 import {
-  parseHex,
   RGBToHSL,
   HSLToRGB
 } from './util'
