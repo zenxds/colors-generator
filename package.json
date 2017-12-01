@@ -9,17 +9,16 @@
   },
   "author": "dongshuang.xds",
   "license": "ISC",
-  "publishConfig": {
-  },
+  "publishConfig": {},
   "repository": {
     "type": "git",
     "url": "git@github.com:zenxds/colors-generator.git"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
-    "babel-loader": "^6.4.1",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.2.2",
-    "webpack": "^2.2.1",
+    "webpack": "^3.9.1",
     "webpack-dev-server": "^2.4.2"
   }
 }
