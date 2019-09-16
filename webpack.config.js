@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 
 const config = {
   base: {
@@ -20,22 +19,12 @@ const config = {
     plugins: []
   },
   dev: {
-    plugins: [
-      new webpack.HotModuleReplacementPlugin()
-    ]
+    mode: 'development',
+    plugins: []
   },
   prod: {
-    plugins: [
-      new webpack.optimize.UglifyJsPlugin({
-        output: {
-          ascii_only: true
-        },
-        compress: {
-          warnings: false,
-          drop_console: false
-        }
-      })
-    ]
+    mode: 'production',
+    plugins: []
   }
 }
 
